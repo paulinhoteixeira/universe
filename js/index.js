@@ -1,14 +1,16 @@
-const routes = {
-  "/": "/pages/home.html",
-  "/universe": "/pages/universe.html",
-  "/explorer": "/pages/explorer.html",
-  404: "/pages/404.html"
-}
+import {Router} from './router.js'
+
+const router = new Router()
+router.add("/", "/pages/home.html")
+router.add("/universe", "/pages/universe.html")
+router.add("/explorer", "/pages/explorer.html")
+router.add(404, "/pages/404.html")
 
 
 
 
-handle()
 
-window.onpopstate = () => handle()
-window.route = () => route()
+router.handle()
+
+window.onpopstate = () => router.handle()
+window.route = () => router.route()
