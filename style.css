@@ -1,0 +1,15 @@
+html{
+  background-image: url(./assets/mountains-universe-1.png);
+  color: #c4c4cc;
+
+}
+
+nav{
+  display: flex;
+}
+
+a{
+  text-decoration: none;
+  color: #c4c4cc;
+
+}
